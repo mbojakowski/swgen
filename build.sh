@@ -38,6 +38,10 @@ copy_resources() {
     for style in $BASE_PATH/*.css; do
         cp $style $TARGET_DIR
     done
+    if [ -d "$BASE_PATH/images" ]; then
+        cp -r $BASE_PATH/images $TARGET_DIR/images
+    fi
+
     if [ -d "$BASE_PATH/fonts" ]; then
         cp -r $BASE_PATH/fonts $TARGET_DIR/fonts
     fi
